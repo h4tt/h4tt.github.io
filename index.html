@@ -6,32 +6,39 @@
     <title>Hack All The Things</title>
     <style>
       html, body {
-        height: 100%;
         margin: 0;
         background: black;
         color: green;
-        max-height: 94vh;
       }
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
+      #output {
+        text-align: center;
       }
       #hatt {
         font-size: 1vw;
-        margin-top: 400px;
+        margin-top: 50px;
+        text-align: left;
+        display: inline-block;
+      }
+      #date {
+        font-size: 1vw;
+      }
+      #location {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-size: 1.5em;
       }
       #coming-soon {
         font-size: 0.679vw;
       }
       #description {
-        margin-top: 300px;
+        margin-top: 80px;
         width: 50%;
         font-family: "Lucida Console", Monaco, monospace;
         line-height: 1.4;
+        margin: 60px auto;
       }
+      @media(max-width:991px){#description{ width:80%; }}
+      @media(min-width:992px){#description{ width:70%; }}
+      @media(min-width:1200px){#description{ width:55%; }}
       #footer {
         margin-top: 100px;
       }
@@ -39,7 +46,7 @@
   </head>
   <body>
     <pre>$ cat ./hack_all_the_things</pre>
-    <div>
+    <div id="output">
       <pre id="hatt">
  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀    ▄▄▄       ██▓     ██▓       ▄▄▄█████▓ ██░ ██ ▓█████    ▄▄▄█████▓ ██░ ██  ██▓ ███▄    █   ▄████   ██████
 ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒    ▒████▄    ▓██▒    ▓██▒       ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀    ▓  ██▒ ▓▒▓██░ ██▒▓██▒ ██ ▀█   █  ██▒ ▀█▒▒██    ▒
@@ -64,9 +71,7 @@
                                                                                                                                                    
    
     </pre>
-    <pre id="location">
-      <h1>4155 Herzberg Labs, Carleton University</h1>
-    </pre>
+    <div id="location">4155 Herzberg Labs, Carleton University</div>
     <div id="description">
       <center>~ Français ci-dessous ~</center><br>
       Come join us on Saturday, June 16th from 12pm-8pm for a day of hacking in Herzberg 4155! Bring your inner Mr. Robot out and pwn all of the systems, capturing all of the flags!
